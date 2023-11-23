@@ -16,7 +16,7 @@
 					<a href="{{node.get_absolute_url}}">{{node.name}}</a>
 					{% if not node.is_leaf_node %}
 						<ul class="children megamenu">
-							<br>{{ children }}</br>
+							{{ children }}
 						</ul>
 					{% endif %}
 				</li>
