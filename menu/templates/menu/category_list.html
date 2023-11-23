@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+{% load mptt_tags %}
+{% load static %}
+
+
+
+{% block title %}Меню{% endblock %}
+{% block css_addition %}<link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %}
+
+{% block content %}
+	<nav class="navmenu">
+		<ul>
+			{% recursetree categories %}
+				<li>
+					<a href="{{node.get_absolute_url}}">{{node.name}}</a>
+					{% if not node.is_leaf_node %}
+						<ul class="children megamenu">
+							<br>{{ children }}</br>
+						</ul>
+					{% endif %}
+				</li>
+			{% endrecursetree %}
+		</ul>
+	</nav>
+{% endblock %}
