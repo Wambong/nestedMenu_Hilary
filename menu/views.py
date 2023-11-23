@@ -5,7 +5,7 @@ from .models import Category, Product
 
 class CategoryListView(ListView):
     model = Category
-    template_name = "category_list.html"
+    template_name = "category.html"
     context_object_name = 'categories'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -26,7 +26,7 @@ def get_category_products(request, slug):
         'category': categories[0],
         'category_products': category_products,
     }
-    return render(request, 'goods_list.html', context
+    return render(request, 'product.html', context
     )
 
 

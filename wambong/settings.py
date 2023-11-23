@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'nested_category.urls'
+ROOT_URLCONF = 'wambong.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'nested_category.wsgi.application'
+WSGI_APPLICATION = 'wambong.wsgi.application'
 
 
 
